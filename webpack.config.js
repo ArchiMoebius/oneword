@@ -13,6 +13,7 @@ const plugins = [
     hash: false,
     minify: true,
     filename: 'index.html',
+    title: 'OneWord',
     publicPath: '/',
   }),
 ];
@@ -37,7 +38,7 @@ module.exports = {
     client: {
       progress: true,
       overlay: true,
-    }
+    },
   },
   entry: './src/index.js',
   output: {
