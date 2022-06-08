@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+
+    .row,
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+.canvas-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.canvas-container canvas {
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #d3d3d3;
+    font: 1em 'Comic Sans MS';
+    color: red;
+    text-align: left;
+}

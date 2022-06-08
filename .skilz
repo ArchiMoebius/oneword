@@ -1,0 +1,11 @@
+{
+	"branch": "main",
+  "description": "A SPA (single-page-application) to read supplied text files - one word at a time",
+  "title": "OneWord",
+  "links": [
+    {
+      "title": "View Source",
+      "href": "https://github.com/ArchiMoebius/oneword/"
+    }
+  ]
+}
