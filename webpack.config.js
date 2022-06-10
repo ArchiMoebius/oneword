@@ -14,7 +14,7 @@ const plugins = [
     minify: true,
     filename: 'index.html',
     title: 'OneWord',
-    publicPath: '/',
+    publicPath: '/oneword/',
   }),
 ];
 
