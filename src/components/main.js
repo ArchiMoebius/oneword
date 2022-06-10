@@ -18,6 +18,16 @@ const main = {
             m('div', { style: 'width: 100%; height: 30px; margin-top: 8px;' }, [
               m('input', {
                 type: 'button',
+                name: 'stop',
+                id: 'inputstop',
+                value: 'Stop',
+                style: 'margin-right:8px;',
+                onclick: function () {
+                  OneWord.stop();
+                },
+              }),
+              m('input', {
+                type: 'button',
                 name: 'replay',
                 id: 'inputreplay',
                 value: 'Replay',

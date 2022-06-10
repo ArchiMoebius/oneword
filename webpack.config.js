@@ -8,15 +8,22 @@ const production = JSON.parse(process.env.NODE_ENV === 'production' || '0');
 
 const plugins = [
   new MiniCssExtractPlugin(),
-  new HtmlWebpackPlugin({
-    inject: true,
-    hash: false,
-    minify: true,
-    filename: 'index.html',
-    title: 'OneWord',
-    publicPath: '/oneword/',
-  }),
 ];
+
+const htmlWebpackPluginConfig = {
+  inject: true,
+  hash: false,
+  minify: true,
+  filename: 'index.html',
+  title: 'OneWord',
+  publicPath: '/oneword/',
+};
+
+if (!production) {
+  htmlWebpackPluginConfig['publicPath'] = '/';
+}
+
+plugins.push(new HtmlWebpackPlugin(htmlWebpackPluginConfig));
 
 if (!production) {
   plugins.push(new BundleAnalyzerPlugin());

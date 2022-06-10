@@ -2,6 +2,7 @@ const OneWord = {
   last_words: [],
   last_canvas_id: '',
   speed: 150,
+  intervalID: false,
   words: `Another one got caught today, it's all over the papers.  "Teenager
 Arrested in Computer Crime Scandal", "Hacker Arrested after Bank Tampering"...
         Damn kids.  They're all alike.
@@ -86,7 +87,11 @@ but you can't stop us all... after all, we're all alike.`.split(
       ctx.fillText(word, x, y);
     };
   
-    intervalID = setInterval(nextWord, OneWord.speed);
+    OneWord.intervalID = setInterval(nextWord, OneWord.speed);
+  },
+  stop: () => {
+    clearInterval(OneWord.intervalID);
+    OneWord.render(OneWord.last_canvas_id, []);
   },
 };
 
